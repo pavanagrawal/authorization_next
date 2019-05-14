@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/authorization.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+            <state relative-caret-position="105">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -37,6 +37,7 @@
       <find>FIX</find>
       <find>TODO</find>
       <find>htt</find>
+      <find>authorization</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,12 +126,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557830721214</updated>
-      <workItem from="1557830723031" duration="1953000" />
+      <workItem from="1557830723031" duration="2087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1953000" />
+    <option name="totallyTimeSpent" value="2087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -217,8 +218,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/authorization.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state relative-caret-position="105">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="40" />
         </state>
       </provider>
     </entry>
