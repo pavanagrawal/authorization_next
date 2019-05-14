@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Converted plugin to gem which will work with association as well.}
   spec.description   = %q{Converted plugin to gem which will work with association as well.}
-  spec.homepage      = "http://www.bioiq.com"
+  spec.homepage      = "https://github.com/pavanagrawal/authorization"
   spec.license       = "MIT"
 
   # Specify which files should be added to the gem when it is released.
