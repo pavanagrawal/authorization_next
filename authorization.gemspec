@@ -2,17 +2,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "authorization/version"
+require "authorization_next/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "authorization-next"
-  spec.version       = Authorization::VERSION
+  spec.name          = "authorization_next"
+  spec.version       = AuthorizationNext::VERSION
   spec.authors       = ["Pavan Agrawal"]
   spec.email         = ["pavan.agrawala@gmail.com"]
 
   spec.summary       = %q{Converted plugin to gem which will work with association as well.}
   spec.description   = %q{Converted plugin to gem which will work with association as well.}
-  spec.homepage      = "https://github.com/pavanagrawal/authorization"
+  spec.homepage      = "https://github.com/pavanagrawal/authorization_next"
   spec.license       = "MIT"
 
   # Specify which files should be added to the gem when it is released.

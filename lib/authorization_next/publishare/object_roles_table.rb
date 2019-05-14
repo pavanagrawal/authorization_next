@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/exceptions'
 require File.dirname(__FILE__) + '/identity'
 
-module Authorization
+module AuthorizationNext
   module ObjectRolesTable
   
     module UserExtensions
@@ -13,8 +13,8 @@ module Authorization
         def acts_as_authorized_user
           has_and_belongs_to_many :roles
           attr_protected :role_ids
-          include Authorization::ObjectRolesTable::UserExtensions::InstanceMethods
-          include Authorization::Identity::UserExtensions::InstanceMethods   # Provides all kinds of dynamic sugar via method_missing
+          include AuthorizationNext::ObjectRolesTable::UserExtensions::InstanceMethods
+          include AuthorizationNext::Identity::UserExtensions::InstanceMethods   # Provides all kinds of dynamic sugar via method_missing
         end
       end
       
@@ -92,8 +92,8 @@ module Authorization
             user.has_no_role role_name, self
           end
           
-          include Authorization::ObjectRolesTable::ModelExtensions::InstanceMethods
-          include Authorization::Identity::ModelExtensions::InstanceMethods   # Provides all kinds of dynamic sugar via method_missing
+          include AuthorizationNext::ObjectRolesTable::ModelExtensions::InstanceMethods
+          include AuthorizationNext::Identity::ModelExtensions::InstanceMethods   # Provides all kinds of dynamic sugar via method_missing
         end
       end
       

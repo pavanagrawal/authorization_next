@@ -1,10 +1,10 @@
-require "authorization/version"
-require File.dirname(__FILE__) + '/authorization/publishare/exceptions'
-require File.dirname(__FILE__) + '/authorization/publishare/parser'
+require "authorization_next/version"
+require File.dirname(__FILE__) + '/authorization_next/publishare/exceptions'
+require File.dirname(__FILE__) + '/authorization_next/publishare/parser'
 
 
 
-module Authorization
+module AuthorizationNext
   module Base
 
     # Modify these constants in your environment.rb to tailor the plugin to your authentication system
@@ -24,7 +24,7 @@ module Authorization
 
     module ControllerClassMethods
 
-      # Allow class-level authorization check.
+      # Allow class-level authorization_next check.
       # permit is used in a before_filter fashion and passes arguments to the before_filter.
       def permit( authorization_expression, *args )
         filter_keys = [ :only, :except ]
@@ -40,7 +40,7 @@ module Authorization
     end
 
     module ControllerInstanceMethods
-      include Authorization::Base::EvalParser  # RecursiveDescentParser is another option
+      include AuthorizationNext::Base::EvalParser  # RecursiveDescentParser is another option
 
       # Permit? turns off redirection by default and takes no blocks
       def permit?( authorization_expression, *args )
@@ -50,7 +50,7 @@ module Authorization
         has_permission?( authorization_expression )
       end
 
-      # Allow method-level authorization checks.
+      # Allow method-level authorization_next checks.
       # permit (without a question mark ending) calls redirect on denial by default.
       # Specify :redirect => false to turn off redirection.
       def permit( authorization_expression, *args )
@@ -143,8 +143,8 @@ module Authorization
 end
 
 
-ActionController::Base.send( :include, Authorization::Base )
-ActionView::Base.send( :include, Authorization::Base::ControllerInstanceMethods )
+ActionController::Base.send( :include, AuthorizationNext::Base )
+ActionView::Base.send( :include, AuthorizationNext::Base::ControllerInstanceMethods )
 
 # You can perform authorization at varying degrees of complexity.
 # Choose a style of authorization below (see README) and the appropriate
@@ -158,15 +158,15 @@ end
 
 case AUTHORIZATION_MIXIN
 when "hardwired"
-  require "authorization/publishare/hardwired_roles"
+  require "authorization_next/publishare/hardwired_roles"
   ActiveRecord::Base.send( :include,
-                           Authorization::HardwiredRoles::UserExtensions,
-                           Authorization::HardwiredRoles::ModelExtensions
+                           AuthorizationNext::HardwiredRoles::UserExtensions,
+                           AuthorizationNext::HardwiredRoles::ModelExtensions
   )
 when "object roles"
-  require "authorization/publishare/object_roles_table"
+  require "authorization_next/publishare/object_roles_table"
   ActiveRecord::Base.send( :include,
-                           Authorization::ObjectRolesTable::UserExtensions,
-                           Authorization::ObjectRolesTable::ModelExtensions
+                           AuthorizationNext::ObjectRolesTable::UserExtensions,
+                           AuthorizationNext::ObjectRolesTable::ModelExtensions
   )
 end

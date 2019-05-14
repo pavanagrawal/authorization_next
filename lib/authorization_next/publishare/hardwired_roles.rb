@@ -12,7 +12,7 @@ require File.dirname(__FILE__) + '/exceptions'
 #
 # See http://www.writertopia.com/developers/authorization
 
-module Authorization
+module AuthorizationNext
   module HardwiredRoles
   
     module UserExtensions
@@ -22,7 +22,7 @@ module Authorization
       
       module ClassMethods
         def acts_as_authorized_user
-          include Authorization::HardwiredRoles::UserExtensions::InstanceMethods
+          include AuthorizationNext::HardwiredRoles::UserExtensions::InstanceMethods
         end
       end
       
@@ -53,7 +53,7 @@ module Authorization
       
       module ClassMethods
         def acts_as_authorizable
-          include Authorization::HardwiredRoles::ModelExtensions::InstanceMethods
+          include AuthorizationNext::HardwiredRoles::ModelExtensions::InstanceMethods
         end
       end
       

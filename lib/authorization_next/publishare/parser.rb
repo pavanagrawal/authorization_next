@@ -1,4 +1,4 @@
-module Authorization
+module AuthorizationNext
   module Base
     
     VALID_PREPOSITIONS = ['of', 'for', 'in', 'on', 'to', 'at', 'by']

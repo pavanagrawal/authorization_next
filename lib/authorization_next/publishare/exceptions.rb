@@ -1,6 +1,6 @@
-module Authorization #:nodoc:
+module AuthorizationNext #:nodoc:
 
-  # Base error class for Authorization module
+  # Base error class for AuthorizationNext module
   class AuthorizationError < StandardError
   end
   

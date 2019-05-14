@@ -12,7 +12,7 @@ require File.dirname(__FILE__) + '/exceptions'
 #   model.has_members                   --> Returns array of users which have role "member" on that model
 #   model.has_members?                  --> Returns true/false
 #
-module Authorization
+module AuthorizationNext
   module Identity
     
     module UserExtensions
@@ -23,10 +23,10 @@ module Authorization
           authorizable_object = args.empty? ? nil : args[0]
         
           base_regex = "is_(\\w+)"
-          fancy_regex = base_regex + "_(#{Authorization::Base::VALID_PREPOSITIONS_PATTERN})"
+          fancy_regex = base_regex + "_(#{AuthorizationNext::Base::VALID_PREPOSITIONS_PATTERN})"
           is_either_regex = '^((' + fancy_regex + ')|(' + base_regex + '))'
           base_not_regex = "is_no[t]?_(\\w+)"
-          fancy_not_regex = base_not_regex + "_(#{Authorization::Base::VALID_PREPOSITIONS_PATTERN})"      
+          fancy_not_regex = base_not_regex + "_(#{AuthorizationNext::Base::VALID_PREPOSITIONS_PATTERN})"
           is_not_either_regex = '^((' + fancy_not_regex + ')|(' + base_not_regex + '))'
         
           if method_name =~ Regexp.new(is_either_regex + '_what$')
